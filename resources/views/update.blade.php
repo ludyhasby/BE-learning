@@ -4,7 +4,8 @@
 @section('content')
 <h1>Update Page</h1>
 
-<form action="{{route('create')}}" method="POST">
+<form action="{{route('update', $book->id)}}" method="POST">
+    @method('PATCH')
     @csrf
     <div class="mb-3">
         <label for="title_book" class="form-label">Title</label>
