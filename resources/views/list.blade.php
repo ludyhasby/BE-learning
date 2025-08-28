@@ -10,6 +10,7 @@
       <th scope="col">Author</th>
       <th scope="col">Publisher</th>
       <th scope="col">Year</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -20,6 +21,9 @@
       <td>{{$b->author}}</td>
       <td>{{$b->publisher}}</td>
       <td>{{$b->year}}</td>
+      <td>
+        <a href="{{route('edit', $b->id)}}" class="btn btn-success">Update</a>
+      </td>
     </tr>
     @endforeach
   </tbody>
